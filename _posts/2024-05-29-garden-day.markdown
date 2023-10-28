@@ -2,7 +2,7 @@
 layout: post
 title:  "Garden Day 2024"
 date:   2024-05-29 18:05:55 +0300
-image:  10.jpg
+image:  garden_day.jpeg
 tags:   Service
 ---
 
