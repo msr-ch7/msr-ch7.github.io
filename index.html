@@ -1,13 +1,77 @@
 ---
 layout: default
 ---
-{% include hero.html %}
+<div class="hero" style="margin-bottom: 0px;">
+    <div class="container">
+        <div class="row">
+            <!-- Text content in the hero panel -->
+            <div class="col col-7 col-t-12 last-item">
+                <div class="hero__content">
+                    <h1 class="hero__title">{{ site.data.settings.author.say-hello }}</h1>
+                    <p class="hero__subtitle">{{ site.data.settings.author.bio }}</p>
+                    <p>&nbsp;</p>
+
+                    <h3>Important Dates</h3>
+                    <!-- Summary event timeline -->
+                    <ul>
+                    {% if site.posts.size > 0 %}{% for post in site.posts reversed %}{% if post.date > (site.time | date: "%Y-%m-%d") %}
+                        <li>
+                            <b>{{ post.date | date: "%b %-d" }}{% if post.end %} - {{ post.end | date: "%b %-d" }}{% endif %}</b>:
+                            {% if post.full %}<a href="{{post.url | prepend: site.baseurl}}" class="">{% endif %}
+                                {{ post.title }}
+                            {% if post.full %}</a>{% endif %}
+                        </li>
+                    {% endif %}{% endfor %}{% endif %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="col col-5 col-t-12">
+                <div class="hero__image">
+                    <img src="{{site.baseurl}}/images/{{ site.data.settings.author.image }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="card col col-3 m-5 p-0">
+            <h5 class="card-header">Classroom Fund</h5>
+            <img src="..." class="card-img-top" style="height: 200px;">
+            <div class="card-body">
+                <p class="card-text">Donate to the CH7 classroom fund via <a href="https://venmo.com/MSRCH7">Venmo</a></p>
+            </div>
+        </div>
+
+        <div class="card col col-3 m-5 p-0">
+            <h5 class="card-header">Ways to Get Involved</h5>
+            <div class="card-body">
+              <p class="card-text">Signup sheet links for various ways to enhance the classroom experience.</p>
+            </div>
+            <ul class="list-group list-group-flush m-0">
+              <li class="list-group-item"><a href="https://www.signupgenius.com/go/10C084BABA622A0F8C34-44943410-chvii#/">Sign up for Cooking or Craft time</a></li>
+              <li class="list-group-item"><a href="https://www.signupgenius.com/go/10C084BABA622A0F8C34-44996585-library#/">Donate Books</a></li>
+            </ul>
+            <div class="card-body"></div>
+        </div>
+
+        <div class="card col col-3 m-5 p-0">
+            <h5 class="card-header">Classroom Wishlist</h5>
+            <div class="card-body">
+              <p class="card-text">Check out Ms Celeste + Ms Michelle's wishlist for the classroom.</p>
+              <a href="#" class="btn btn-primary">Amazon <i class="ion ion-ios-arrow-forward"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
 	<div class="row">
 		<div class="col col-12">
 			{% if site.posts.size > 0 %}
-				<h4 class="lates-title">Upcoming Events</h4>
+				<h4 class="lates-title">Upcoming Event Details</h4>
 			{% endif %}
 		</div>
 	</div>
@@ -16,8 +80,8 @@ layout: default
 <div class="container">
 	<div class="row">
 	{% if site.posts.size > 0 %}
-		{% for post in site.posts %}
-            {% if post.date > (site.time | date: "%Y-%m-%d") %}
+		{% for post in site.posts reversed %}
+            {% if post.date > (site.time | date: "%Y-%m-%d") and post.full %}
 			    {% include article-content.html %}
             {% endif %}
 		{% endfor %}
