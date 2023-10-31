@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="hero" style="margin-bottom: 0px;">
+<div class="hero pt-4 pb-4 mb-0">
     <div class="container">
         <div class="row">
             <!-- Text content in the hero panel -->
@@ -30,6 +30,17 @@ layout: default
                 <div class="hero__image">
                     <img src="{{site.baseurl}}/images/{{ site.data.settings.author.image }}" alt="">
                 </div>
+
+                <div class="card mt-3 col-12">
+                    <div class="card-header">
+                        <b>Questions? Ideas? Want to get involved?</b><br/>Email your Room Parents:
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><a href="mailto:infoafowler@gmail.com">Asia Fowler (Kinsley's mom</a></li>
+                      <li class="list-group-item"><a href="mailto:cmmadiso@gmail.com">Chrissy Madison (Rhys' mom)</a></li>
+                      <li class="list-group-item"><a href="mailto:huda.altameemi@yahoo.com">Huda Altameemi (Zane's mom)</a></li>
+                    </ul>
+                  </div>
             </div>
         </div>
     </div>
@@ -39,20 +50,21 @@ layout: default
     <div class="row">
         <div class="card col col-3 m-5 p-0">
             <h5 class="card-header">Classroom Fund</h5>
-            <img src="..." class="card-img-top" style="height: 200px;">
+            <img src="/images/venmo.png" class="card-img-top" style="width: 80%; margin-left: 10%">
             <div class="card-body">
-                <p class="card-text">Donate to the CH7 classroom fund via <a href="https://venmo.com/MSRCH7">Venmo</a></p>
+                <p class="card-text">Donate to the CH7 classroom fund via <a href="https://venmo.com/MSRCH7">Venmo</a>. This money will go to our teachers' birthday/holiday/teacher appreciation gifts, class events, classroom needs, etc. </p>
             </div>
         </div>
 
         <div class="card col col-3 m-5 p-0">
             <h5 class="card-header">Ways to Get Involved</h5>
             <div class="card-body">
-              <p class="card-text">Signup sheet links for various ways to enhance the classroom experience.</p>
+              <p class="card-text">Please support our classroom community by volunteering for a class presentation, themed book donation, or to participate in an upcoming classroom event. </p>
             </div>
             <ul class="list-group list-group-flush m-0">
-              <li class="list-group-item"><a href="https://www.signupgenius.com/go/10C084BABA622A0F8C34-44943410-chvii#/">Sign up for Cooking or Craft time</a></li>
-              <li class="list-group-item"><a href="https://www.signupgenius.com/go/10C084BABA622A0F8C34-44996585-library#/">Donate Books</a></li>
+              <li class="list-group-item"><a href="https://www.signupgenius.com/go/10C084BABA622A0F8C34-44943410-chvii#/">Class presentation, craft or cooking</a></li>
+              <li class="list-group-item"><a href="https://www.signupgenius.com/go/10C084BABA622A0F8C34-44996585-library#/">Donate a book</a></li>
+              <li class="list-group-item">(Coming soon) Thanksgiving Potluck</li>
             </ul>
             <div class="card-body"></div>
         </div>
@@ -60,10 +72,16 @@ layout: default
         <div class="card col col-3 m-5 p-0">
             <h5 class="card-header">Classroom Wishlist</h5>
             <div class="card-body">
-              <p class="card-text">Check out Ms Celeste + Ms Michelle's wishlist for the classroom.</p>
-              <a href="#" class="btn btn-primary">Amazon <i class="ion ion-ios-arrow-forward"></i></a>
+              <p class="card-text">(Coming Soon) Check out Ms. Celeste + Ms. Michelle's wishlist for the classroom.</p>
+              <a href="#" class="btn btn-primary disabled">Amazon <i class="ion ion-ios-arrow-forward"></i></a>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="card col-12 text-bg-success mb-5 p-0" style="border-radius: 0px">
+    <div class="card-body text-center">
+        <p class="card-text">Get to know everyone in class with the <u><b><a class="link-light" target="_blank" href="https://docs.google.com/presentation/d/1y2y9dbiv16-b8aH6PFN8E-88cFx2pz-7/edit#slide=id.p1">Children's House VII facesheet</a></b></u>.</p>
     </div>
 </div>
 
@@ -71,7 +89,7 @@ layout: default
 	<div class="row">
 		<div class="col col-12">
 			{% if site.posts.size > 0 %}
-				<h4 class="lates-title">Upcoming Event Details</h4>
+				<h4 class="lates-title mb-5">Upcoming Event Details</h4>
 			{% endif %}
 		</div>
 	</div>
