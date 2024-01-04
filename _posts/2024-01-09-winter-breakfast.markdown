@@ -6,5 +6,5 @@ tags:   Social
 full:   True
 ---
 
-Tentative times from 8:15-9:15, but more details to come soon!
+We’re excited to host a winter breakfast for students and their families on January 9 from 8:15am - 9:15am. Come for as long as you can to enjoy a light breakfast, a photo booth and winter craft with your student.
 
